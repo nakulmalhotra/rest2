@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (?:.*?)\/?([0-9]+)\-[\d\w\s\-]+\/([0-9]+)\-[\d\w\s\-]+\/? products.php?catid=$1&productid=$2 [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (?:.*?)\/?([0-9]+)\-[\d\w\s\-]+\/? articles.php?artid=$1 [NC,L]
+
